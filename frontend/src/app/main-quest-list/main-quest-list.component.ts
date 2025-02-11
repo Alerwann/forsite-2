@@ -1,3 +1,4 @@
+import { linkytb } from './../models/linkyt';
 import { QueteService } from './../services/quetes.service';
 import { Observable } from 'rxjs';
 import { Quest } from '../models/quest';
@@ -16,12 +17,15 @@ import { MainQuestComponent } from '../main-quest/main-quest.component';
 export class MainQuestListComponent implements OnInit{
 
   quetes$!: Observable<Quest[]>
+  linkytb$!: Observable<linkytb[]>
 
   constructor(private queteService: QueteService){}
 
   ngOnInit(): void {
     
     this.quetes$ = this.queteService.getAllQuest();
-    console.log(this.quetes$)
+
+
+    this.linkytb$ = this.queteService.getAllLink();
   }
 }
