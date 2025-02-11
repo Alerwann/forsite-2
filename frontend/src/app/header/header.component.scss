@@ -1,0 +1,46 @@
+
+
+header{
+    display: grid ;
+    grid-template-rows: 1fr auto;
+    justify-items: center;
+    background-color: rgb(31,147,220);
+    height: 200px;
+  
+    
+}
+
+nav{
+    display: inline-flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 10px 0 ;
+    
+}
+
+h1{  
+    font-family: "Jaini Purva", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 100px;
+    margin: 0;
+   
+}
+
+a{  
+    border-radius: 15px;
+    text-decoration: none;
+    padding: 0 15px;
+    color: rgb(105,218,248) ;
+    font-family: "Jockey One", serif;
+    font-size: 26px;
+   
+}
+
+a:hover{
+    background-color: white;
+}
+a:active{
+    
+    color: black;
+}
