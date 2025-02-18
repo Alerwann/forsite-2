@@ -3,10 +3,9 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
-import { MainAccueilComponent } from './main-accueil/main-accueil.component';
-import { MainQuestListComponent } from './main-quest-list/main-quest-list.component';
-import { HttpClient} from '@angular/common/http';
-
+import { MainAccueilComponent } from './base/main-accueil/main-accueil.component';
+import { MainQuestListComponent } from './Quest/main-quest-list/main-quest-list.component';
+import { QuizzComponent } from './quizz/quizz.component';
 
 
 
@@ -21,6 +20,8 @@ imports: [
   ReactiveFormsModule,
   MainAccueilComponent,
   MainQuestListComponent,
+  QuizzComponent
+
 
 
 

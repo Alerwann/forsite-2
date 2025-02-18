@@ -1,0 +1,53 @@
+<h2>Quizz</h2>
+<div class="contenair">
+    <form [formGroup]="quizForm" (ngSubmit)="onSubmit() " >
+        <mat-list>
+            <!-- <ol>
+              <li>
+                <mat-list-item [class.good]="verifGood" [class.wrong]="verifWrong"  ><h3 >Quel héro doit aller chercher Jade dans un portail?</h3> </mat-list-item>
+                <mat-radio-group formControlName ="Question1">
+                    <mat-radio-button value="0"><p>Kendo</p> </mat-radio-button>
+                    <mat-radio-button value="1"><p>Daigo</p> </mat-radio-button>
+                    <mat-radio-button value="0"><p>Hope</p> </mat-radio-button>
+             
+                </mat-radio-group>  </li>
+                <li>
+                <mat-list-item [class.good]="verifGood" [class.wrong]="verifWrong" ><h3>En quelle année Midas est apparu pour la première fois?</h3></mat-list-item>
+                <mat-radio-group formControlName ="Question2" >
+                    <mat-radio-button value="0"><p>2019</p></mat-radio-button>
+                    <mat-radio-button value="1"><p>2020</p></mat-radio-button>
+                    <mat-radio-button value="0"><p>2021</p></mat-radio-button>
+                </mat-radio-group> </li>
+                <li>
+                <mat-list-item ><h3>Combien de temps environ le trou noir a duré en 2019?</h3></mat-list-item>
+                <mat-radio-group formControlName ="Question3" >
+                    <mat-radio-button value="0"><p>12h</p></mat-radio-button>
+                    <mat-radio-button value="0"><p>24h</p></mat-radio-button>
+                    <mat-radio-button value="1"><p>48h</p></mat-radio-button>
+                </mat-radio-group> </li>
+             </ol> -->
+             <ol>
+                <li *ngFor="let q of questions">
+                  <mat-list-item [class.good]="q.verifGood" [class.wrong]="q.verifWrong">
+                    <h3>{{ q.text }}</h3>
+                  </mat-list-item>
+                  <mat-radio-group [formControlName]="q.id">
+                    <mat-radio-button value="1"><p>Option 1</p></mat-radio-button>
+                    <mat-radio-button value="2"><p>Option 2</p></mat-radio-button>
+                    <mat-radio-button value="3"><p>Option 3</p></mat-radio-button>
+                  </mat-radio-group>
+                </li>
+              </ol>
+        
+          </mat-list>
+          <div class="buttoncontenair">
+            <button mat-raised-button type="submit">Valider</button>
+            <button mat-raised-button type="reset">Annuler</button>
+        </div>
+          
+    </form>
+    
+
+</div>
+
+

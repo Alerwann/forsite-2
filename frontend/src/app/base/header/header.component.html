@@ -1,0 +1,55 @@
+<header>
+  <h1 class="jaini-purva-regular">Fortquest</h1>
+  <nav>
+    <a routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Accueil</a>
+
+    <button mat-button [matMenuTriggerFor]="menu">Quêtes</button>
+    <mat-menu #menu="matMenu">
+    
+      <a mat-menu-item  routerLink="allquest"
+        routerLinkActive="active"
+        (click)="onLinkClick('all')"
+        >Ensemble des quêtes</a
+      >
+
+ <a mat-menu-item
+      
+      routerLink="allquest"
+      routerLinkActive="active"
+      (click)="onLinkClick('hebdo')"
+      >Quêtes Hebdos</a
+    >
+<a mat-menu-item routerLink="allquest"
+  routerLinkActive="active"
+  (click)="onLinkClick('histoire')"
+  >Quêtes d'Histoire</a
+>
+
+ 
+
+  <a mat-menu-item
+  routerLink="allquest"
+  routerLinkActive="active"
+  (click)="onLinkClick('event')"
+  >Quêtes d'Event</a
+>
+
+    </mat-menu>
+
+    <a routerLink="meme"  routerLinkActive="active">Memes</a>
+
+    <a routerLink="quizz"  routerLinkActive="active">Quizz</a>
+
+
+    
+
+
+
+
+  
+
+    
+   
+ 
+  </nav>
+</header>

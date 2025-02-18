@@ -1,0 +1,34 @@
+.cardge{
+    display: grid;
+    grid-template-columns: 1fr 1fr  3fr 3fr  3fr;
+    box-shadow: 15px 15px 7px rgb(143, 142, 142);
+    margin:0 30px 30px;
+    border: 2px solid black;
+    border-radius: 50px;
+    height: 200px;
+    background-color: rgb(102, 206, 209);
+   
+}
+
+.title{
+
+    margin: auto;
+}
+
+
+.lieux, .description, .tips{
+    margin: auto;
+}
+
+img{
+    height: 200px;
+    width: 250px;
+   
+}
+a{
+    margin:auto;
+}
+
+h3{
+    margin: auto;
+}

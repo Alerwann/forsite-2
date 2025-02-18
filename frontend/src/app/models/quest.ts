@@ -1,9 +1,16 @@
-export class Quest {
+export class Quest  {
+    
     constructor(
         public linkytb: string,
         public type: string,
         public lieux: string,
         public description: string,
-        public tips: string
-    ){}
+        public tips: string,
+        public srcimg:string,
+        public date:string
+    , ) {
+        
+      
+    }
+
 }
