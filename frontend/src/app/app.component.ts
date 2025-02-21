@@ -12,11 +12,11 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.scss'
 })
 export default class AppComponent {
-  goodReponseVerif(question : string): number{
-    const numValue= Number(question)
-    console.log(numValue)
-    return numValue
+  // goodReponseVerif(question : string): number{
+  //   const numValue= Number(question)
+  //   console.log(numValue)
+  //   return numValue
    
-  }
+  // }
   
 }

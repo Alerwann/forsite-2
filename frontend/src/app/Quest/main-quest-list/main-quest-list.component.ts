@@ -1,6 +1,6 @@
 
 import { QueteService } from '../../services/quetes.service';
-import { Observable, switchMap, of } from 'rxjs';
+import { Observable, switchMap, of, map, catchError } from 'rxjs';
 import { Quest } from '../../models/quest';
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -16,8 +16,8 @@ import { MainQuestComponent } from '../main-quest/main-quest.component';
 
 export class MainQuestListComponent implements OnInit{
 
-  quetes$: Observable<Quest[]>= of([])
- 
+  quetes$: Observable<Quest[] >= of([])
+  quest!: Quest
   type!: string
  receiveDate!: string
 
@@ -28,11 +28,12 @@ export class MainQuestListComponent implements OnInit{
 
     this.quetes$ = this.queteService.type$.pipe(
       switchMap(type => {
-       
-         console.log(type)
-          return this.queteService.getOneTypeQuest(type);
-        
+          return this.queteService.getOneTypeQuest(type).pipe(
+            map((quests)=>quests??[]),
+            catchError(()=> of([]))
+          );
       })
+      
     );
   }
   }

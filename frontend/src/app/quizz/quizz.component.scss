@@ -1,10 +1,13 @@
 mat-list ol {
     list-style-type: decimal;
+    justify-items: center;
+    font-size: 30px;
     
   }
   
   mat-list li {
     display: list-item;
+ 
     margin: 10px 0 20px;
   }
 
@@ -17,20 +20,13 @@ mat-list ol {
   }
 
   mat-radio-button{
-    font-size: 35px;
-
-  }
-
-  mat-radio-group{
-  margin-left: 30px;
-
-  }
-
-  p{
-    font-size: 25px;
-    margin-right: 30px;
+    font-size: 45px;
+  
     
   }
+
+
+
 
   h2{
     text-align: center;
@@ -38,17 +34,66 @@ mat-list ol {
     font-family: "Jaini Purva", serif;
   }
 
+  h3{
+    // text-align: center;
+    font-size: 30px;
+  }
+
   .buttoncontenair{
     display:flex ;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content:center;
     margin-top: 30px;
+  
   }
 
 .good{
-  background-color: green;
+  background-color: rgb(120, 252, 137);
+
+}
+.wrong{
+ background-color:rgb(255, 171, 171);
 }
 
-.wrong{
-  background-color: red;
+.wrong, .good{
+  border-radius: 25px;
+}
+
+.default{
+  background-color:transparent;
+  border-radius: 0 ;
+}
+
+button{
+  margin:0 50px;
+}
+
+.result{
+  margin-top:20px;
+  text-align: center;
+  font-family: "Jaini Purva", serif;
+  font-size: 40px;
+}
+
+img{
+  height:150px;
+}
+
+a{
+  text-decoration: none;
+}
+
+.feedback{
+  text-align: center;
+  margin-top:20px;
+  text-align: center;
+  font-family: "Jockey One", serif;
+  font-size: 30px;
+ 
+}
+
+.questionContenaire{
+display: grid;
+justify-content: center;
+grid-template-rows: 1fr 1fr 1fr;
 }
